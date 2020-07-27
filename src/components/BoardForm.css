@@ -1,0 +1,33 @@
+.form {
+    background: white;
+    text-align: center;
+    line-height: 1.5;
+    margin: auto;
+}
+
+.form input {
+    width: 350px;
+    font-size: 1.00rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border: 1px solid #c5f6fa;
+    margin: auto;
+}
+
+.save-button {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: 1rem;
+    background: #22b8cf;
+    border-radius: 3px;
+    border-style: none;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.save-button:hover{
+    background: #3bc5db;
+}

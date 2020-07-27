@@ -1,0 +1,33 @@
+.board-item {
+    padding: 1rem;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.15s;
+    user-select: none;
+}
+
+.board-item:hover {
+    background: #e3fafc;
+}
+
+.remove{
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    color: #e64980;
+    font-weight: 600;
+    opacity: 0;
+}
+
+.board-item:hover .remove{
+    opacity: 1;
+}
+
+.remove-board{
+    border-top:hidden;
+    border-right:hidden;
+    border-bottom:hidden;
+}
+
+.remove-board:hover {
+    background: #e3fafc;
+}

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import BoardForm from "./components/BoardForm";
 import BoardItem from "./components/BoardItem";
+import './App.css'
 
 class App extends Component{
   constructor(props){
@@ -12,14 +13,14 @@ class App extends Component{
     boards:[
       {
         brdno: 1,
-        brdwriter: 'Seo yoseph',
-        brdtitle: 'If you intend to live then you die',
+        brdwriter: '서요셉',
+        brdtitle: '리액트 게시판 연습',
         brddate: new Date()
       },
       {
         brdno: 2,
-        brdwriter: 'So SiNo',
-        brdtitle: 'Founder for tow countries',
+        brdwriter: '서요셉',
+        brdtitle: 'CSS 숙달하기',
         brddate: new Date()
       }
     ]
@@ -54,22 +55,27 @@ class App extends Component{
     const { boards } = this.state;
     return(
       <div>
+        <p className="title" align="center">
+          간단한 게시판 만들기
+        </p>
         <BoardForm onSaveData={this.handleSaveData} ref={this.child}/>
-        <table border="1">
-          <tbody>
-          <tr align="center">
-            <td width="50">No</td>
-            <td width="300">Title</td>
-            <td width="100">Name</td>
-            <td width="100">Date</td>
-          </tr>
-          {
-            boards.map(row=>
-                (<BoardItem key={row.brdno} row={row} onRemove={this.handleRemove} onSelectRow={this.handleSelectRow}/>)
-            )
-          }
-          </tbody>
-        </table>
+        <p>
+          <table className="board-table" border="1">
+            <tbody>
+            <tr align="center">
+              <td width="50">번호</td>
+              <td width="500">제목</td>
+              <td width="100">글쓴이</td>
+              <td width="100">날짜</td>
+            </tr>
+            {
+              boards.map(row=>
+                  (<BoardItem key={row.brdno} row={row} onRemove={this.handleRemove} onSelectRow={this.handleSelectRow}/>)
+              )
+            }
+            </tbody>
+          </table>
+        </p>
       </div>
     );
   }
