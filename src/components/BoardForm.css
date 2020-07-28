@@ -1,5 +1,4 @@
 .form {
-    background: white;
     text-align: center;
     line-height: 1.5;
     margin: auto;
@@ -10,8 +9,9 @@
     font-size: 1.00rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    border: 1px solid #c5f6fa;
+    border: 1px solid #3a3a3e;
     margin: auto;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 .save-button {
@@ -20,14 +20,16 @@
     padding-left: 1rem;
     padding-right: 1rem;
     margin-left: 1rem;
-    background: #22b8cf;
+    background: #3a3a3e;
     border-radius: 3px;
     border-style: none;
     color: white;
     font-weight: 600;
     cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 .save-button:hover{
-    background: #3bc5db;
+    background: #252527;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }

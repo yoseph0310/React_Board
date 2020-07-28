@@ -1,7 +1,24 @@
 import React, {Component} from 'react';
+import styled from "styled-components";
 import BoardForm from "./components/BoardForm";
 import BoardItem from "./components/BoardItem";
 import './App.css'
+
+const Container = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:linear-gradient(
+      to right,
+      rgba(20, 20, 20, 0.1) 10%,
+      rgba(20, 20, 20, 0.7) 70%,
+      rgba(20, 20, 20, 1)
+    ),
+    url(https://source.unsplash.com/random/1920x1080);
+  background-size: cover;
+`;
 
 class App extends Component{
   constructor(props){
@@ -54,29 +71,31 @@ class App extends Component{
   render() {
     const { boards } = this.state;
     return(
-      <div>
-        <p className="title" align="center">
-          간단한 게시판 만들기
-        </p>
-        <BoardForm onSaveData={this.handleSaveData} ref={this.child}/>
-        <p>
-          <table className="board-table" border="1">
-            <tbody>
-            <tr align="center">
-              <td width="50">번호</td>
-              <td width="500">제목</td>
-              <td width="100">글쓴이</td>
-              <td width="100">날짜</td>
-            </tr>
-            {
-              boards.map(row=>
-                  (<BoardItem key={row.brdno} row={row} onRemove={this.handleRemove} onSelectRow={this.handleSelectRow}/>)
-              )
-            }
-            </tbody>
-          </table>
-        </p>
-      </div>
+        <Container>
+            <div>
+                <p className="title" align="center">
+                    <b>간단한 게시판 만들기</b>
+                </p>
+                <BoardForm onSaveData={this.handleSaveData} ref={this.child}/>
+                <p>
+                    <table className="board-table" border="1">
+                        <tbody>
+                        <tr align="center">
+                            <td width="50"><b>번호</b></td>
+                            <td width="500"><b>제목</b></td>
+                            <td width="100"><b>글쓴이</b></td>
+                            <td width="100"><b>날짜</b></td>
+                        </tr>
+                        {
+                            boards.map(row=>
+                                (<BoardItem key={row.brdno} row={row} onRemove={this.handleRemove} onSelectRow={this.handleSelectRow}/>)
+                            )
+                        }
+                        </tbody>
+                    </table>
+                </p>
+            </div>
+        </Container>
     );
   }
 }
