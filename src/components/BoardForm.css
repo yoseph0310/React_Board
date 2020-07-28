@@ -2,6 +2,7 @@
     text-align: center;
     line-height: 1.5;
     margin: auto;
+    background: transparent;
 }
 
 .form input {
@@ -9,8 +10,9 @@
     font-size: 1.00rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    border: 1px solid #3a3a3e;
+    border: none;
     margin: auto;
+    background: transparent;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 

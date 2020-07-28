@@ -21,7 +21,7 @@ class BoardItem extends Component{
                 </td>
                 <td>{this.props.row.brdwriter}</td>
                 <td>{this.props.row.brddate.toLocaleDateString('ko-KR')}</td>
-                <td className="remove-board"><div className="remove" onClick={this.handleRemove}>&times;</div></td>
+                <td><div className="remove" onClick={this.handleRemove}>&times;</div></td>
             </tr>
         );
     }

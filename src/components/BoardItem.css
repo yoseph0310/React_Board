@@ -4,11 +4,16 @@
     cursor: pointer;
     transition: all 0.15s;
     user-select: none;
+    border: hidden;
 }
 
 .board-item:hover {
-    /*background: #ededf7;*/
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+
+.board-item:hover .remove{
+    opacity: 1;
 }
 
 .remove{
@@ -17,18 +22,4 @@
     color: #e64980;
     font-weight: 600;
     opacity: 0;
-}
-
-.board-item:hover .remove{
-    opacity: 1;
-}
-
-.remove-board{
-    border-top:hidden;
-    border-right:hidden;
-    border-bottom:hidden;
-}
-
-.remove-board:hover {
-    background: #e3fafc;
 }

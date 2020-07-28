@@ -1,10 +1,8 @@
 .board-table{
     border-collapse: collapse;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-    border-left: none;
-    border-right: none;
+    border: hidden;
     border-radius: 3px;
+    background: transparent;
     text-align: center;
     line-height: 1.5;
     margin: auto;

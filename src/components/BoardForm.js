@@ -28,7 +28,7 @@ class BoardForm extends Component{
     render() {
         return(
             <form className="form" onSubmit={this.handleSubmit}>
-                <input placeholder="제목" name="brdtitle" value={this.state.brdtitle} onChange={this.handleChange}/>
+                <input placeholder="제  목" name="brdtitle" value={this.state.brdtitle} onChange={this.handleChange}/>
                 <input placeholder="글쓴이" name="brdwriter" value={this.state.brdwriter} onChange={this.handleChange}/>
                 <button className="save-button" type="submit">저장</button>
             </form>
